@@ -35,6 +35,13 @@ class AppStyle {
     fontSize: 15.0,
     color: kDarkGrayColor,
   );
+
+  static const TextStyle nunitoRegular15DarkGray = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 15.0,
+    color: kDarkGrayColor,
+  );
   static const TextStyle nunitoBold15Blue = TextStyle(
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w600,
@@ -45,6 +52,69 @@ class AppStyle {
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w400,
     fontSize: 15.0,
+    color: kBlackColor,
+  );
+
+  static const TextStyle nunitoRegular14Gray = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 14.0,
+    color: kDarkGrayColor,
+  );
+
+  static const TextStyle nunitoBold28Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w700,
+    fontSize: 28.0,
+    color: kBlackColor,
+  );
+
+  static const TextStyle nunitoMedium15Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 15.0,
+    color: kBlackColor,
+  );
+
+  static const TextStyle nunitoMedium15Green = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 15.0,
+    color: Colors.green,
+  );
+
+  static const TextStyle nunitoMedium28Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 28.0,
+    color: kBlackColor,
+  );
+
+  static const TextStyle nunitoMedium20Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 20.0,
+    color: kBlackColor,
+  );
+
+  static const TextStyle nunitoMedium24Green = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+    color: kGreenColor,
+  );
+
+  static const TextStyle nunitoMedium24Orange = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+    color: kOrangeColor,
+  );
+
+  static const TextStyle nunitoMedium32Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 32.0,
     color: kBlackColor,
   );
 }

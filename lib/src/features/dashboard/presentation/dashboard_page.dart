@@ -4,7 +4,6 @@ import 'package:duseca_assignment/src/core/shared_widgets/custom_divider.dart';
 import 'package:duseca_assignment/src/core/shared_widgets/custom_drawer.dart';
 import 'package:duseca_assignment/src/features/calendar/presentation/calendar_page.dart';
 import 'package:duseca_assignment/src/features/chat%20list/presentation/chat_list_page.dart';
-import 'package:duseca_assignment/src/features/chat/presentation/chat_page.dart';
 import 'package:duseca_assignment/src/features/contacts/presentation/contact_page.dart';
 import 'package:duseca_assignment/src/features/eCommerce/presentation/e_commerce_page.dart';
 import 'package:duseca_assignment/src/features/file%20manager/presentation/file_manager_page.dart';

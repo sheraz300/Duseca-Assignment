@@ -122,6 +122,10 @@ class Assets {
   /// assets/icons/download_icon.svg
   static const String assetsIconsDownloadIcon = "assets/icons/download_icon.svg";
 
+  /// Assets for assetsIconsFacebookIcon
+  /// assets/icons/facebook_icon.svg
+  static const String assetsIconsFacebookIcon = "assets/icons/facebook_icon.svg";
+
   /// Assets for assetsIconsFemale1Icon
   /// assets/icons/female1_icon.svg
   static const String assetsIconsFemale1Icon = "assets/icons/female1_icon.svg";
@@ -141,6 +145,10 @@ class Assets {
   /// Assets for assetsIconsImageIcon
   /// assets/icons/image_icon.svg
   static const String assetsIconsImageIcon = "assets/icons/image_icon.svg";
+
+  /// Assets for assetsIconsInstagramIcon
+  /// assets/icons/instagram_icon.svg
+  static const String assetsIconsInstagramIcon = "assets/icons/instagram_icon.svg";
 
   /// Assets for assetsIconsLabelPurpleIcon
   /// assets/icons/label_purple_icon.svg
@@ -186,6 +194,10 @@ class Assets {
   /// assets/icons/menu_icon.svg
   static const String assetsIconsMenuIcon = "assets/icons/menu_icon.svg";
 
+  /// Assets for assetsIconsMoreIcon
+  /// assets/icons/more_icon.svg
+  static const String assetsIconsMoreIcon = "assets/icons/more_icon.svg";
+
   /// Assets for assetsIconsNotesIcon
   /// assets/icons/notes_icon.svg
   static const String assetsIconsNotesIcon = "assets/icons/notes_icon.svg";
@@ -229,5 +241,9 @@ class Assets {
   /// Assets for assetsIconsWomanIcon
   /// assets/icons/woman_icon.svg
   static const String assetsIconsWomanIcon = "assets/icons/woman_icon.svg";
+
+  /// Assets for assetsImagesWoman
+  /// assets/images/woman.png
+  static const String assetsImagesWoman = "assets/images/woman.png";
 }
 

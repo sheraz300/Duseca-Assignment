@@ -1,7 +1,12 @@
+import 'package:duseca_assignment/src/core/shared_widgets/custom_container.dart';
 import 'package:duseca_assignment/src/core/shared_widgets/text_widget.dart';
+import 'package:duseca_assignment/src/features/calendar/presentation/widgets/time_line_item.dart';
+import 'package:duseca_assignment/src/utils/constants/app_assets.dart';
 import 'package:duseca_assignment/src/utils/style/app_color.dart';
+import 'package:duseca_assignment/src/utils/style/app_string.dart';
 import 'package:duseca_assignment/src/utils/style/app_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class CalendarPage extends StatefulWidget {
@@ -13,7 +18,7 @@ class CalendarPage extends StatefulWidget {
 
 class _CalendarPageState extends State<CalendarPage> {
   DateTime _focusedDay = DateTime.now();
-
+  int selectedTabIndex = 0;
   DateTime? _selectedDay;
 
   @override
@@ -26,12 +31,17 @@ class _CalendarPageState extends State<CalendarPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              14.verticalSpace,
+              TextWidget(
+                "Calendar",
+                style: AppStyle.nunitoBold28Black,
+              ),
               const SizedBox(height: 20),
               _buildTabSelector(),
               const SizedBox(height: 20),
               _buildCalendar(),
               const SizedBox(height: 20),
-              _buildUpcomingEvents(),
+              // _buildUpcomingEvents(),
             ],
           ),
         ),
@@ -63,33 +73,183 @@ class _CalendarPageState extends State<CalendarPage> {
   }
 
   Widget _buildTabSelector() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
       children: [
-        Row(
-          children: [
-            _buildTabButton('Month', isSelected: true),
-            const SizedBox(width: 8),
-            _buildTabButton('Week'),
-            const SizedBox(width: 8),
-            _buildTabButton('Day'),
-          ],
-        ),
         Container(
-          height: 40,
-          width: 40,
-          decoration: BoxDecoration(
-            color: kBlueColor,
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Center(
-            child: IconButton(
-              icon: const Icon(Icons.add, color: kWhiteColor, size: 32),
-              onPressed: () {},
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
+                  color: kTabBGColor,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  children: [
+                    // Month Tab
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedTabIndex = 0;
+                        });
+                      },
+                      child: Container(
+                        height: 40.h,
+                        width: 80.w,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: selectedTabIndex == 0
+                              ? Colors.white
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: selectedTabIndex == 0
+                              ? [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 4,
+                                    offset: Offset(0, 2),
+                                  ),
+                                ]
+                              : [],
+                        ),
+                        child: Text(
+                          'Month',
+                          style: TextStyle(
+                            color: selectedTabIndex == 0
+                                ? Colors.black
+                                : Colors.grey,
+                            fontWeight: selectedTabIndex == 0
+                                ? FontWeight.bold
+                                : FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    // Week Tab
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedTabIndex = 1;
+                        });
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: selectedTabIndex == 1
+                              ? Colors.white
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: selectedTabIndex == 1
+                              ? [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 4,
+                                    offset: Offset(0, 2),
+                                  ),
+                                ]
+                              : [],
+                        ),
+                        child: Text(
+                          'Week',
+                          style: TextStyle(
+                            color: selectedTabIndex == 1
+                                ? Colors.black
+                                : Colors.grey,
+                            fontWeight: selectedTabIndex == 1
+                                ? FontWeight.bold
+                                : FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    // Divider
+                    Container(
+                      height: 20,
+                      width: 1,
+                      color: Colors.grey[400],
+                    ),
+                    const SizedBox(width: 16),
+                    // Day Tab
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedTabIndex = 2;
+                        });
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: selectedTabIndex == 2
+                              ? Colors.white
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: selectedTabIndex == 2
+                              ? [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 4,
+                                    offset: Offset(0, 2),
+                                  ),
+                                ]
+                              : [],
+                        ),
+                        child: Text(
+                          'Day',
+                          style: TextStyle(
+                            color: selectedTabIndex == 2
+                                ? Colors.black
+                                : Colors.grey,
+                            fontWeight: selectedTabIndex == 2
+                                ? FontWeight.bold
+                                : FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Add Button
+              Container(
+                height: 45.w,
+                width: 45.w,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
         ),
+        // SizedBox(
+        //   child: Center(
+        //     // Content based on selected tab
+        //     child: Text(
+        //       selectedTabIndex == 0
+        //           ? 'Month View'
+        //           : selectedTabIndex == 1
+        //               ? 'Week View'
+        //               : 'Day View',
+        //       style: TextStyle(
+        //         fontSize: 24,
+        //         fontWeight: FontWeight.bold,
+        //         color: Colors.black87,
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
@@ -112,9 +272,12 @@ class _CalendarPageState extends State<CalendarPage> {
   }
 
   Widget _buildCalendar() {
-    return Card(
-      color: kWhiteColor,
-      elevation: 2,
+    return CustomContainer(
+      width: 340,
+      height: 400,
+      padding: const EdgeInsets.all(16.0),
+      backgroundColor: kPrimaryColor,
+      margin: EdgeInsets.only(bottom: 5),
       child: TableCalendar(
         firstDay: DateTime(2020),
         lastDay: DateTime(2030),
@@ -146,45 +309,51 @@ class _CalendarPageState extends State<CalendarPage> {
   }
 
   Widget _buildUpcomingEvents() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Upcoming',
-        ),
-        const SizedBox(height: 16),
-        _buildEventCard(
-          time: '07:00',
-          title: 'Brandbook and Guidebook',
-          type: 'Design',
-          color: Colors.orange,
-          participants: ['A', 'B', 'C', 'D'],
-        ),
-        const SizedBox(height: 8),
-        _buildEventCard(
-          time: '08:30',
-          title: 'App Development',
-          type: 'Coding',
-          color: Colors.green,
-          participants: ['E', 'F', 'G', 'H'],
-        ),
-        const SizedBox(height: 8),
-        _buildEventCard(
-          time: '10:00',
-          title: 'Landing Page',
-          type: 'Meeting',
-          color: Colors.blue,
-          participants: ['I', 'J', 'K', 'L'],
-        ),
-        const SizedBox(height: 8),
-        _buildEventCard(
-          time: '11:30',
-          title: 'Project "Rocket"',
-          type: 'Meeting',
-          color: Colors.yellow,
-          participants: ['M', 'N', 'O', 'P'],
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: ListView(
+        shrinkWrap: true,
+        scrollDirection: Axis.vertical,
+        children: [
+          TimeLineItem(
+            time: "07:00",
+            title: "Brandbook and Guidebook",
+            category: "Design",
+            iconColor: Colors.orange,
+            participants: [
+              Assets.assetsIconsMale1Icon,
+              Assets.assetsIconsFemale1Icon,
+              Assets.assetsIconsMale2Icon,
+              Assets.assetsIconsFemale2Icon,
+            ],
+          ),
+          TimeLineItem(
+            time: "08:30",
+            title: "App Development",
+            category: "Coding",
+            iconColor: Colors.green,
+            participants: [
+              Assets.assetsIconsMale1Icon,
+              Assets.assetsIconsFemale1Icon,
+              Assets.assetsIconsMale2Icon,
+              Assets.assetsIconsFemale2Icon,
+            ],
+            isHighlighted: true,
+          ),
+          TimeLineItem(
+            time: "10:00",
+            title: "Landing Page",
+            category: "Meeting",
+            iconColor: Colors.purple,
+            participants: [
+              Assets.assetsIconsMale1Icon,
+              Assets.assetsIconsFemale1Icon,
+              Assets.assetsIconsMale2Icon,
+              Assets.assetsIconsFemale2Icon,
+            ],
+          ),
+        ],
+      ),
     );
   }
 
