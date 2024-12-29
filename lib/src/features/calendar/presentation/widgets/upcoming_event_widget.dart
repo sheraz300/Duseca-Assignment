@@ -1,8 +1,10 @@
 import 'package:duseca_assignment/src/core/shared_widgets/asset_image_widget.dart';
+import 'package:duseca_assignment/src/core/shared_widgets/custom_container.dart';
 import 'package:duseca_assignment/src/core/shared_widgets/text_widget.dart';
 import 'package:duseca_assignment/src/features/calendar/presentation/widgets/dotted_line_painter.dart';
 import 'package:duseca_assignment/src/utils/constants/app_assets.dart';
 import 'package:duseca_assignment/src/utils/constants/constants.dart';
+import 'package:duseca_assignment/src/utils/style/app_color.dart';
 import 'package:duseca_assignment/src/utils/style/app_string.dart';
 import 'package:duseca_assignment/src/utils/style/app_style.dart';
 import 'package:flutter/material.dart';
@@ -65,21 +67,12 @@ Widget upcomingEventsWidget() {
                           size: Size(270.w, 1),
                           painter: DashPainter(),
                         ),
-                        Container(
-                          width: 270.w,
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.2),
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: const Offset(0, 5),
-                              ),
-                            ],
-                          ),
+                        CustomContainer(
+                          padding: const EdgeInsets.all(16.0),
+                          backgroundColor: kPrimaryColor,
+                          margin: EdgeInsets.only(bottom: 5),
+                          width: 280.w,
+                          height: 132.h,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [

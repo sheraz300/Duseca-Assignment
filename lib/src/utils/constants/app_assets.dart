@@ -250,6 +250,10 @@ class Assets {
   /// assets/icons/woman_icon.svg
   static const String assetsIconsWomanIcon = "assets/icons/woman_icon.svg";
 
+  /// Assets for assetsImagesWallpaperImage
+  /// assets/images/wallpaper_image.png
+  static const String assetsImagesWallpaperImage = "assets/images/wallpaper_image.png";
+
   /// Assets for assetsImagesWoman
   /// assets/images/woman.png
   static const String assetsImagesWoman = "assets/images/woman.png";

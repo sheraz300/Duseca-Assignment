@@ -63,9 +63,7 @@ class _ChatListPageState extends State<ChatListPage> {
                           ? CustomeBadge(count: chat.badgeCount!)
                           : null,
                       onTap: () {
-                        if (chat.title == "Design Team") {
-                          context.push(AppRoutes.chat);
-                        }
+                        context.push(AppRoutes.chat);
                         debugPrint("Tapped on ${chat.title}");
                       },
                     );

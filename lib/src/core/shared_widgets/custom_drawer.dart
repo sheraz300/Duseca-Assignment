@@ -36,7 +36,7 @@ class CustomDrawer extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: EdgeInsets.only(left: 20, top: 50.h),
               child: Row(
                 children: [
                   AssetImageWidget(
@@ -51,9 +51,11 @@ class CustomDrawer extends StatelessWidget {
                 ],
               ),
             ),
+            25.verticalSpace,
             SizedBox(
               height: 620.h,
               child: ListView.builder(
+                padding: EdgeInsets.all(0),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemCount: drawerList.length,

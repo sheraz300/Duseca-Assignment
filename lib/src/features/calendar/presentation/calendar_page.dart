@@ -194,8 +194,8 @@ class _CalendarPageState extends State<CalendarPage> {
 
   Widget calendarWidget() {
     return CustomContainer(
-      width: 340,
-      height: 400,
+      width: 355.w,
+      height: 400.w,
       padding: const EdgeInsets.all(16.0),
       backgroundColor: kPrimaryColor,
       margin: EdgeInsets.only(bottom: 5),

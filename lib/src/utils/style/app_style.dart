@@ -77,6 +77,13 @@ class AppStyle {
     color: kBlackColor,
   );
 
+  static const TextStyle nunitoRegular15White = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 15.0,
+    color: kWhiteColor,
+  );
+
   static const TextStyle nunitoRegular14Gray = TextStyle(
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w400,

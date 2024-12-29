@@ -80,67 +80,65 @@ class _DashboardPageState extends State<DashboardPage>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
-          children: [
-            CustomDrawer(
-              selectedIndex: _selectedIndex,
-              onItemSelected: _onItemSelected,
-            ),
-            AnimatedBuilder(
-              animation: _animationController,
-              builder: (context, child) {
-                double slide = _drawerWidth * _animationController.value;
-                return Transform(
-                  transform: Matrix4.identity()..translate(slide),
-                  child: GestureDetector(
-                    onTap: _isDrawerOpen ? _toggleDrawer : null,
-                    child: Scaffold(
-                      appBar: CustomAppBar(
-                        showTitle: false,
-                        showLeading: true,
-                        leadingImagePath: Assets.assetsIconsMenuIcon,
-                        backgroundColor: kPrimaryColor,
-                        actions: [
-                          AssetImageWidget(
-                            path: Assets.assetsIconsSearchIcon,
-                            fit: BoxFit.contain,
-                          ),
-                          25.horizontalSpace,
-                          AssetImageWidget(
-                              path: Assets.assetsIconsSettingIcon,
-                              fit: BoxFit.contain),
-                          25.horizontalSpace,
-                          AssetImageWidget(
-                              path: Assets.assetsIconsNotificationIcon,
-                              fit: BoxFit.contain),
-                          25.horizontalSpace,
-                          CustomDivider(
-                            thickness: 1.5,
-                            color: kLightGrayColor,
-                            height: 35.h,
-                            isVertical: true,
-                          ),
-                          20.horizontalSpace,
-                          AssetImageWidget(
-                            path: Assets.assetsIconsMale4Icon,
-                            height: 45.h,
-                            width: 45.w,
-                            fit: BoxFit.contain,
-                          ),
-                          15.horizontalSpace,
-                        ],
-                        onMenuPressed: _toggleDrawer,
-                      ),
-                      body: _screens[_selectedIndex],
+    return Scaffold(
+      body: Stack(
+        children: [
+          CustomDrawer(
+            selectedIndex: _selectedIndex,
+            onItemSelected: _onItemSelected,
+          ),
+          AnimatedBuilder(
+            animation: _animationController,
+            builder: (context, child) {
+              double slide = _drawerWidth * _animationController.value;
+              return Transform(
+                transform: Matrix4.identity()..translate(slide),
+                child: GestureDetector(
+                  onTap: _isDrawerOpen ? _toggleDrawer : null,
+                  child: Scaffold(
+                    appBar: CustomAppBar(
+                      showTitle: false,
+                      showLeading: true,
+                      leadingImagePath: Assets.assetsIconsMenuIcon,
+                      backgroundColor: kPrimaryColor,
+                      actions: [
+                        AssetImageWidget(
+                          path: Assets.assetsIconsSearchIcon,
+                          fit: BoxFit.contain,
+                        ),
+                        25.horizontalSpace,
+                        AssetImageWidget(
+                            path: Assets.assetsIconsSettingIcon,
+                            fit: BoxFit.contain),
+                        25.horizontalSpace,
+                        AssetImageWidget(
+                            path: Assets.assetsIconsNotificationIcon,
+                            fit: BoxFit.contain),
+                        25.horizontalSpace,
+                        CustomDivider(
+                          thickness: 1.5,
+                          color: kLightGrayColor,
+                          height: 35.h,
+                          isVertical: true,
+                        ),
+                        20.horizontalSpace,
+                        AssetImageWidget(
+                          path: Assets.assetsIconsMale4Icon,
+                          height: 45.h,
+                          width: 45.w,
+                          fit: BoxFit.contain,
+                        ),
+                        15.horizontalSpace,
+                      ],
+                      onMenuPressed: _toggleDrawer,
                     ),
+                    body: _screens[_selectedIndex],
                   ),
-                );
-              },
-            ),
-          ],
-        ),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
