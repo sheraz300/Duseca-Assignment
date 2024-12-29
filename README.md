@@ -12,7 +12,6 @@ A modern Flutter project showcasing various features such as Charts, Chat functi
 ## Project Structure
 This project follows the Clean Architecture pattern, dividing the codebase into distinct layers for better separation of concerns:
 - **Presentation Layer**: UI components and widgets.
-- **Application Layer**: State management and use cases.
 - **Domain Layer**: Business logic and entities.
 - **Data Layer**: Data sources, repositories, and models.
 
