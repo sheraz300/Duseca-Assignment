@@ -78,6 +78,7 @@ class _ChatListPageState extends State<ChatListPage> {
                       title: chat.title,
                       subtitle: chat.subtitle,
                       onTap: () {
+                        context.push(AppRoutes.chat);
                         debugPrint("Tapped on ${chat.title}");
                       },
                     );
