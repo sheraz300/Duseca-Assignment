@@ -64,31 +64,7 @@ The assets are automatically mapped to `app_assets.dart` under `lib/src/utils/co
    ```
 ### Output
 
-![WhatsApp Image 2024-12-29 at 23 21 39 (2)](https://github.com/user-attachments/assets/70da254e-fbc9-496d-a014-3e91fd0668a7)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 39 (1)](https://github.com/user-attachments/assets/5f0e8f14-08a6-4824-8787-f38b5d802c31)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 40 (1)](https://github.com/user-attachments/assets/25289d06-03b0-4c84-abc0-dae28db3c487)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 39](https://github.com/user-attachments/assets/a1a97c40-fca0-4661-aeeb-61004c692e4b)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 40 (2)](https://github.com/user-attachments/assets/41160117-64d1-41f9-9d24-937f48df0928)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 40](https://github.com/user-attachments/assets/0981fdc3-a507-4142-a291-7bca507271b9)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 41](https://github.com/user-attachments/assets/a1ac92a1-8ada-4bfd-b652-b7f5ffee7d0b)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 41 (2)](https://github.com/user-attachments/assets/cb946bfc-0256-429e-9e7c-3881ec9fa8f0)
-
-
-![WhatsApp Image 2024-12-29 at 23 21 41 (1)](https://github.com/user-attachments/assets/ca34ef71-e546-4914-b7ca-6e6d6f7e5f21)
+Pending...
 
 
 
