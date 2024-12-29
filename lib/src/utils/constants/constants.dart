@@ -3,6 +3,7 @@ import 'package:duseca_assignment/src/core/models/calendars_model.dart';
 import 'package:duseca_assignment/src/core/models/drawer_model.dart';
 import 'package:duseca_assignment/src/core/shared_widgets/asset_image_widget.dart';
 import 'package:duseca_assignment/src/core/shared_widgets/text_widget.dart';
+import 'package:duseca_assignment/src/features/chat%20list/data/models/chat_model.dart';
 import 'package:duseca_assignment/src/features/overview/data/models/social_stat_model.dart';
 import 'package:duseca_assignment/src/utils/constants/app_assets.dart';
 import 'package:duseca_assignment/src/utils/style/app_color.dart';
@@ -193,3 +194,106 @@ final activityToolTip = TooltipBehavior(
     );
   },
 );
+
+// List of events
+final List<Map<String, dynamic>> events = [
+  {
+    "startTime": "07:00",
+    "title": "Brandbook and Guidebook",
+    "subtitle": "Design",
+    "avatars": [
+      Assets.assetsIconsMale1Icon,
+      Assets.assetsIconsMale2Icon,
+      Assets.assetsIconsMale3Icon,
+      Assets.assetsIconsMale4Icon,
+    ],
+  },
+  {
+    "startTime": "08:30",
+    "title": "App Development",
+    "subtitle": "Coding",
+    "avatars": [
+      Assets.assetsIconsMale1Icon,
+      Assets.assetsIconsFemale1Icon,
+      Assets.assetsIconsFemale2Icon,
+      Assets.assetsIconsMale3Icon,
+    ],
+  },
+  {
+    "startTime": "10:00",
+    "title": "Landing Page",
+    "subtitle": "Meeting",
+    "avatars": [
+      Assets.assetsIconsMale2Icon,
+      Assets.assetsIconsMale4Icon,
+      Assets.assetsIconsFemale3Icon,
+      Assets.assetsIconsFemale1Icon,
+    ],
+  },
+  {
+    "startTime": "11:30",
+    "title": "Project 'Rocket'",
+    "subtitle": "Meeting",
+    "avatars": [
+      Assets.assetsIconsMale2Icon,
+      Assets.assetsIconsMale4Icon,
+      Assets.assetsIconsFemale3Icon,
+      Assets.assetsIconsFemale1Icon,
+    ],
+  },
+];
+
+final List<PinnedChat> pinnedChats = [
+  PinnedChat(
+    avatar: CircleAvatar(
+      backgroundColor: Colors.purple,
+      child: Text("A", style: AppStyle.nunitoBold18White),
+    ),
+    title: "Alphaboard",
+    subtitle: "Jane: Hello, Mark! I am wr...",
+    badgeCount: 3,
+  ),
+  PinnedChat(
+    avatar: CircleAvatar(
+      backgroundColor: Colors.orange,
+      child: const TextWidget("DT", style: AppStyle.nunitoBold18White),
+    ),
+    title: "Design Team",
+    subtitle: "You: Hello. Can you drop t...",
+    badgeCount: null,
+  ),
+  PinnedChat(
+    avatar: AssetImageWidget(
+        path: Assets.assetsIconsMale3Icon, width: 40.w, height: 40.h),
+    title: "Dustin Williamson",
+    subtitle: "Dustin is typing...",
+    badgeCount: 5,
+  ),
+];
+
+final List<AllChat> allChats = [
+  AllChat(
+    avatar: AssetImageWidget(
+        path: Assets.assetsIconsFemale1Icon, width: 40.w, height: 40.h),
+    title: "Jane Wilson",
+    subtitle: "Hi! How are you, Steve? 😊",
+  ),
+  AllChat(
+    avatar: AssetImageWidget(
+        path: Assets.assetsIconsMale2Icon, width: 40.w, height: 40.h),
+    title: "Brandon Pena",
+    subtitle: "How about going somew...",
+  ),
+  AllChat(
+    avatar: AssetImageWidget(
+        path: Assets.assetsIconsMale5Icon, width: 40.w, height: 40.h),
+    title: "Kristin Mccoy",
+    subtitle: "It looks amazing!",
+  ),
+  AllChat(
+    avatar: AssetImageWidget(
+        path: Assets.assetsIconsMale6Icon, width: 40.w, height: 40.h),
+    title: "Shane Black",
+    subtitle: "Paul's having a party tom..",
+  ),
+];

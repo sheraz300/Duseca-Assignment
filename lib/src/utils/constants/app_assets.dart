@@ -162,6 +162,14 @@ class Assets {
   /// assets/icons/Logo.svg
   static const String assetsIconsLogo = "assets/icons/Logo.svg";
 
+  /// Assets for assetsIconsLongArrowLeftIcon
+  /// assets/icons/long_arrow_left_icon.svg
+  static const String assetsIconsLongArrowLeftIcon = "assets/icons/long_arrow_left_icon.svg";
+
+  /// Assets for assetsIconsLongArrowRightIcon
+  /// assets/icons/long_arrow_right_icon.svg
+  static const String assetsIconsLongArrowRightIcon = "assets/icons/long_arrow_right_icon.svg";
+
   /// Assets for assetsIconsMailIcon
   /// assets/icons/mail_icon.svg
   static const String assetsIconsMailIcon = "assets/icons/mail_icon.svg";

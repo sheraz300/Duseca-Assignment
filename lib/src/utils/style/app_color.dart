@@ -15,5 +15,6 @@ const Color kGroupButtonColor = Color.fromRGBO(217, 217, 217, 100);
 const Color kBlueColor = Color.fromRGBO(45, 153, 255, 1);
 const Color kLightBlueColor = Color.fromRGBO(26, 142, 255, 0.1);
 const Color kTabBGColor = Color.fromRGBO(232, 234, 237, 1);
+const Color kChatTileColor = Color.fromRGBO(245, 247, 250, 1);
 const Color kWhiteColor = Colors.white;
 const Color kBlackColor = Colors.black;

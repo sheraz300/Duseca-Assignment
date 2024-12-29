@@ -24,12 +24,12 @@ class TimeLineItem extends StatelessWidget {
     return Stack(
       children: [
         // Dotted line
-        Positioned.fill(
-          left: 24,
-          child: CustomPaint(
-            painter: DottedLinePainter(),
-          ),
-        ),
+        // Positioned.fill(
+        //   left: 24,
+        //   child: CustomPaint(
+        //     painter: DottedLinePainter(),
+        //   ),
+        // ),
         Row(
           children: [
             Container(

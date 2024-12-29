@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-class DottedLinePainter extends CustomPainter {
+class DashPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
+    const double dashWidth = 5.0;
+    const double dashSpace = 3.0;
+    final paint = Paint()
       ..color = Colors.grey
-      ..strokeWidth = 2
-      ..style = PaintingStyle.stroke;
+      ..strokeWidth = 1.0;
 
-    double dashWidth = 4;
-    double dashSpace = 4;
-    double startY = 0;
-
-    while (startY < size.height) {
+    double startX = 0;
+    while (startX < size.width) {
       canvas.drawLine(
-        Offset(0, startY),
-        Offset(0, startY + dashWidth),
+        Offset(startX, 0),
+        Offset(startX + dashWidth, 0),
         paint,
       );
-      startY += dashWidth + dashSpace;
+      startX += dashWidth + dashSpace;
     }
   }
 
   @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
 }

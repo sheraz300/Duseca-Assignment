@@ -44,4 +44,11 @@ class AppString {
   static const String shareCount = "19,042";
   static const String likes = "Likes";
   static const String likeCount = "34,310";
+
+  // Calendar Screen
+  static const String calendarTitle = "Calendar";
+  static const String month = "Month";
+  static const String week = "Week";
+  static const String day = "Day";
+  static const String upcoming = "Upcoming";
 }

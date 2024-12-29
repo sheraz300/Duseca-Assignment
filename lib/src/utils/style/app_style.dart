@@ -29,6 +29,28 @@ class AppStyle {
     fontSize: 15.0,
     color: kBlackColor,
   );
+
+  static const TextStyle nunitoBold15White = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 15.0,
+    color: kWhiteColor,
+  );
+
+  static const TextStyle nunitoBold18White = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w700,
+    fontSize: 18.0,
+    color: kWhiteColor,
+  );
+
+  static const TextStyle nunitoBold18Black = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w700,
+    fontSize: 18.0,
+    color: kBlackColor,
+  );
+
   static const TextStyle nunitoBold15DarkGray = TextStyle(
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w600,
@@ -62,6 +84,20 @@ class AppStyle {
     color: kDarkGrayColor,
   );
 
+  static const TextStyle nunitoRegular14White = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 14.0,
+    color: kWhiteColor,
+  );
+
+  static const TextStyle nunitoRegular12Gray = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 12.0,
+    color: kDarkGrayColor,
+  );
+
   static const TextStyle nunitoBold28Black = TextStyle(
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w700,
@@ -74,6 +110,13 @@ class AppStyle {
     fontWeight: FontWeight.w600,
     fontSize: 15.0,
     color: kBlackColor,
+  );
+
+  static const TextStyle nunitoMedium15DarkGray = TextStyle(
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w600,
+    fontSize: 15.0,
+    color: kDarkGrayColor,
   );
 
   static const TextStyle nunitoMedium15Green = TextStyle(
